@@ -22,7 +22,7 @@ int main() {
     char c;
 
     for(int a=0;a<MAX_DIGITS_LENGTH;++a) nnums[a] = 0;
-    for(int b=0;b<=MAX_ALPHABET_LENGTH;++b) {nupper[b] = 0; nlower[b] = 0;}
+    for(int b=0;b<=MAX_ALPHABET_LENGTH;++b) nupper[b] = nlower[b] = 0;
 
     while((c=getchar()) != EOF) {
         if(c==' ' || c=='\n' || c=='\t') {
