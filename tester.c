@@ -151,6 +151,31 @@ Deploy the models locally using PyCharm and provide credentials to SageMaker.
 None of the above options are correct.
 
 
+Answers to Assessment Test
+1. A, C. Options B and D are valid regularization terms, but they will not penalize small weights as much as the L1 penalty.
+2. B. Option C is also unsupervised, but LDA is not used on tabular datasets but rather on textual data. Options A and D are supervised learning algorithms.
+3. D. Deep learning training often requires GPU instances, so option A is wrong. Option B is a custom Amazon chip designed for inference, and G4 instances, while of GPU type, are more suited for inference than training. Option D is the right answer.
+4. C. Options A and B are complex solutions requiring a lot of custom development. Rekognition does not detect PII, so only option C is correct.
+5. C. SageMaker Processing and Batch Transform jobs are not used for debugging code. Option B will only help you lower cost, but that is not what the question is asking. Only option C is the right response.
+6. C, D. This is a regression problem, so options C and D are correct. The data is not contained in a time series, so DeepAR forecasting will not apply.
+7. B. Object detection is an ML problem that requires labels, so options A and D are incorrect. Option C is incorrect because the use case is very domain specific. You will need to factor in data labeling as part of the solution.
+8. D. Rekognition custom labels builds image classification algorithms on already labeled data. Data Wrangler and Augmented AI are not data labeling solutions. SageMaker Ground Truth is the right answer.
+9. D. SageMaker Neo automatically optimizes machine learning models to run on supported edge devices and processors. CodeGuru and DevOps Guru are services to improve code quality and identify bottlenecks in code and application availability, respectively. The Neuron SDK is an SDK for deep learning inference. So only option D is correct.
+10. A, C. Both Random Cut Forest and Lookout for Metrics can be used for anomaly detection. The other two are used for time series forecasting.
+11. C. Options A and D are incorrect, and though option B is a requirement, by itself it will not ensure that SageMaker accesses your data only via your VPC.
+12. C, D. Since Comprehend is an AI service, AWS will take care of ensuring that the instances are patched and maintain the availability of the comprehend API endpoints.
+13. B, C. Both SageMaker Processing and Glue can be used with PySpark scripts for preparing your data for training.
+14. A. Recall = TP / (TP + FN) = 90 / (90 + 10) = 0.9.
+15. B, D. Options A and C are not available in SageMaker.
+16. B. SageMaker HPO can be used with your own code written in PyTorch.
+17. A, C. Both SageMaker Batch Transform and Processing can be used once the data is offloaded from Redshift to S3.
+18. D. Options B and C are deployment strategies. A/B testing can be used to compare real-world performance of the two models before deciding to update the endpoint.
+19. B. K-means is an unsupervised learning algorithm. It attempts to find discrete groupings within data, where members of a group are as similar as possible to one another and as different as possible from members of other groups.
+20. A. Minimize root mean squared error (RMSE) for regression problems.
+21. B. The easiest way is to use script mode; both options A and C involve more effort. For option D, multimodel endpoints let you query different individual models behind the same endpoint but not an ensemble model. For ensemble models in option D, you may still need to bring your own container to accept both types of models.
+22. B, C. Option A does not exist, and option D can be used to analyze sentiment in voice calls along with Comprehend but not with recorded text data.
+23. A. Use Recall, since in this case false negatives should be 0, because predicting an actual cancer as benign may be risky for the patient. False positives may lead to more screenings but are less risky.
+24. B. Once your model is in S3, it is easy to use the SageMaker APIs to host the same.
 
 
 FROM Somanath Nanda
