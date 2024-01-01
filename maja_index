@@ -1,0 +1,256 @@
+Table of Contents
+Chapter 1:​ Exam Overview
+Exam Content
+Exam Subject Areas
+Exam Format
+Supplementary Study Materials
+Signing Up for a Free Trial
+Sign-up Process
+Trial Expiration
+Registering for the Exam
+Create a Snowflake Certification Portal Account
+Start the Application
+Schedule the Exam
+Rescheduling and Cancellation Policy
+Exam Results and Retake Policy
+Recertification
+Summary
+Chapter 2:​ Introduction to the Snowflake Cloud Data Platform
+Snowflake as a Cloud Service
+Supported Cloud Platforms
+Supported Cloud Regions
+Snowflake Editions
+Standard Edition
+Enterprise Edition
+Business Critical Edition
+Virtual Private Snowflake (VPS)
+Snowflake Releases
+The Snowflake Web Interface
+User Menu
+Worksheets
+Dashboards
+Data
+Snowflake Marketplace
+Activity
+Admin
+Partner Connect
+Help &​ Support
+SnowSQL
+Install SnowSQL
+Configure SnowSQL
+Connectors and Drivers
+Setting Up Your Snowflake Account
+Create a Virtual Warehouse
+Configure the Snowflake Sample Database
+Summary
+Chapter 3:​ Snowflake Architecture
+Architecture Layers
+Database Storage
+Query Processing
+Cloud Services
+Snowflake Objects
+Tables
+Permanent Tables
+Temporary Tables
+Transient Tables
+Views
+Data Types
+Numeric Data Types
+String and Binary Data Types
+Logical Data Types
+Date and Time Data Types
+Semi-Structured Data Types
+Geospatial Data Types
+User-Defined Functions
+Stored Procedures
+Comparing UDFs and Stored Procedures
+Streams
+Creating Streams
+Consuming Streams
+Types of Streams
+Tasks
+Sequences
+Summary
+Chapter 4:​ Account Access and Security
+Account Identifiers
+Legacy Format
+Account Name Within an Organization
+Parameter Management
+Network Security and Policies
+User Authentication
+Multi-Factor Authentication
+Federated Authentication
+Session Policies
+Access Control
+Securable Objects
+Users
+Roles
+System-Defined Roles
+Custom Roles
+Granting and Revoking Privileges
+Role Hierarchy and Privilege Inheritance
+Setting Primary and Secondary Roles
+Summary
+Chapter 5:​ Storage and Performance Concepts
+Micro-partitions
+Data Clustering
+Clustered Tables
+Clustering Keys
+Reclustering
+Data Storage Monitoring
+Search Optimization Service
+Choosing Tables for Search Optimization
+Choosing Queries for Search Optimization
+Using Tables with Search Optimization
+Cost of Search Optimization
+The Query Profile Tool
+Data Spilling
+Data Caching
+Micro-partition Pruning
+Query History
+Explain Execution Plan
+Summary
+Chapter 6:​ Virtual Warehouses
+Warehouse Size
+Multi-cluster Warehouses
+Multi-cluster Warehouse Modes
+Multi-cluster Warehouse Scaling Policies
+Examples of Multi-cluster Credit Usage
+Warehouse Scaling
+Scaling Up
+Scaling Out
+Working with Warehouses
+Creating a Warehouse
+Starting or Resuming a Warehouse
+Suspending a Warehouse
+Resizing a Warehouse
+Using a Warehouse
+Monitoring Warehouse Loads
+Warehouse Billing
+Billing for User-Managed Warehouses
+Billing for Cloud Services
+Resource Monitors
+Summary
+Chapter 7:​ Data Loading and Unloading
+Preparing Files for Data Loading
+File Formats and Encoding
+File Compression and Encryption
+File Sizing Best Practices
+Folder Structures
+File Formats
+Sample File and Table for Loading
+Loading Using the Web Interface
+Loading from Cloud Storage
+Creating an External Stage
+Directory Tables
+Using the COPY Command
+Copy Options
+Lists of Files
+Preventing Data Duplication
+Validation Before Using the COPY Command
+Removing Staged Files
+Load History
+Loading from the Local File System
+Types of Internal Stages
+Loading Files into an Internal Stage
+Using the COPY Command
+Loading Continuously Using Snowpipe
+Detecting Staged Files
+File Sizing for Snowpipe
+Preventing Data Duplication
+Creating a Storage Integration
+Creating a Pipe
+Removing Staged Files
+Loading Using External Tables
+Data Unloading
+Unloading into Single or Multiple Files
+Using the COPY and GET Commands
+Summary
+Chapter 8:​ Data Transformation
+Data Sampling
+Estimating Functions
+Computing the Number of Distinct Values
+Estimating Similarity of Two or More Sets
+Estimating Frequent Values
+Estimating Percentile Values
+Post-Processing Query Results
+Semi-Structured Data
+Supported Semi-Structured Data Formats
+Loading Semi-Structured Data
+Detection of Column Definitions
+Querying Semi-Structured Data
+Selecting First-Level Elements
+Using the FLATTEN Function
+Using the GET Function
+Querying Semi-Structured Data from a Stage
+NULL Values
+Unstructured Data
+Working with Pre-Signed URLs
+Working with Scoped or File URLs
+Materialized Views
+Comparison with Regular Views
+Comparison with Tables and Cached Results
+Materialized Views in the Query Optimizer
+Privileges Related to Materialized Views
+Creating Materialized Views
+Limitations on Creating Materialized Views
+Adding Clustering Keys to Materialized Views
+Summary
+Chapter 9:​ Data Protection
+Time Travel
+Data Retention Period
+Querying Historical Data
+Cloning Historical Objects
+Dropping and Restoring Objects
+Failsafe
+Cost for Time Travel and Failsafe
+Data Encryption
+Client-Side Encryption
+Key Rotation
+Periodic Rekeying
+Customer-Managed Keys
+Tri-Secret Secure
+Cloning
+Database Replication
+Replication Restrictions
+Billing for Database Replication
+Working with Database Replication
+Summary
+Chapter 10:​ Data Sharing
+Secure Data Sharing
+Snowflake Share Object
+Reader Accounts
+Direct Share
+Creating a Direct Share
+Consuming a Direct Share
+Creating a Reader Account
+Configuring a Reader Account
+Snowflake Marketplace
+Types of Data Listings
+Get or Request Listings
+Become a Provider
+Data Exchange
+Secure Views
+Creating Secure Views
+Best Practices for Using Secure Views
+Secure User Defined Functions
+Creating Secure UDFs
+Best Practices for Secure UDFs
+Summary
+Chapter 11:​ SQL Scripting and Snowpark
+Snowflake Scripting
+Snowflake Scripting Blocks
+Declaring Variables
+Assigning Values to Variables
+Branching and Loops
+Cursors
+Number of Rows Affected
+Query ID of the Last Query
+Handling Exceptions
+More Information
+Snowpark
+Creating UDFs
+Data Frames
+More Information
+What’s Next
+Index
