@@ -254,3 +254,24 @@ Data Frames
 More Information
 What’s Next
 Index
+
+
+Exam Content
+The SnowPro Core Certification is designed for individuals who want to validate their knowledge of Snowflake. You are expected to have a thorough understanding of the following subject areas:
+Data loading and transformation in Snowflake
+
+Virtual warehouse performance and concurrency
+
+DDL and DML queries
+
+Using semi-structured and unstructured data
+
+Cloning and time travel
+
+Data sharing
+
+Snowflake account structure and management
+
+
+
+
