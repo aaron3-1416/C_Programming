@@ -1,0 +1,44 @@
+Chapter 1: AWS AI ML Stack
+
++ Amazon SageMaker
+
+Is an end-to-end machine learning platform that lets you build, train, tune, and deploy models at scale.
+SageMaker provides features through every step in the typical machine learning lifecycle.
+https://docs.aws.amazon.com/sagemaker/latest/dg/whatis.html
+Amazon SageMaker Features:
+Machine Learning phases: PREPARE, BUILD, TUNE-TRAIN, DEPLOY
+Prepare: GroundTruth, Data Wrangler, Processing, Feature Store, Clarify.
+Build: Notebooks, Studio, Autopilot, Jumpstart.
+Tune-Train: Managed Training, Experiments, Tuning, Debugger, Spot Training.
+Deploy: Managed Endpoints, Model Monitor, Pipelines.
+
+Analyzing and Preprocessing Data
+Generally, the tool of choice for developing code that can help prepare data is an IDE. and more commonly a Jupyter Notebook.
+A notebook contains a mix of Markdown and runnable code that records outputs of each runnable cell.
+Once you are done experimenting with code on a notebook, it is also typical to perform the same preprocessing in stand-alone Python code.
+
+SageMaker Notebook Instance
+Is a managed ML compute instance running the Jupyter server. 
+A notebook instance can be created from SageMaker console or using the CreateNotebookInstance API.
+SageMaker creates network interface in the chosen VPC, associates security group.
+SageMaker launches notebook in the VPC and enables traffic.
+SageMaker installs common ML packages and frameworks.
+SageMaker runs any lifecycle configuration script tha you define.
+Scripts can be used to pull the latest updates from a Git repository, mount a shared drive, or download data and packages.
+SageMaker attaches an EBS storage volume (size between 5 GB and 16 TB).
+Files stored inside the /home/ec2-user/SageMaker directory persist between notebook sessions (between turn on and off notebooks).
+Scheduling a notebook to be turned off during idle times is important to reduce costs.
+For previous, using lifecycle configuration scripts or via Lambda functions.
+https://aws.amazon.com/blogs/machine-learning/right-sizing-resources-and-avoiding-unnecessary-costs-in-amazon-sagemaker
+
+
+
+
+
+
+
+
+
+
+
+
