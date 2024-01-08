@@ -30,6 +30,77 @@ Files stored inside the /home/ec2-user/SageMaker directory persist between noteb
 Scheduling a notebook to be turned off during idle times is important to reduce costs.
 For previous, using lifecycle configuration scripts or via Lambda functions.
 https://aws.amazon.com/blogs/machine-learning/right-sizing-resources-and-avoiding-unnecessary-costs-in-amazon-sagemaker
+When you access your notebook instance, the console uses the credentials you used to sign in to get a presigned URL by
+calling the CreatePresignedNotebookInstanceUrl API call. 
+If you are signing in through your company's single sign-on, Active Directory, or another identity provider like Google
+or Facebook, identity federation using identity and access management (IAM) roles are already set up, and this lets you
+assume a role indirectly that allows access to SageMaker resources, such as a notebook instance.
+SageMaker uses nbexamples with 200 examples showcasing various use cases and SageMaker features.
+You can edit the notebook execution role to access other AWS services.
+For example:
+Manage large-scale data preprocessing by making API calls to AWS Glue.
+Connect to Amazon EMR to run a PySpark kernel.
+Query an Amazon Redshift data warehouse for data that you need to prepare for training.
+
+SageMaker Studio
+Is a web-based IDE for machine learning and is based on a highly customized JupyterLab environment.
+It launches containerized images that are used to run kernels for your notebooks.
+This lets you have multiple back-end compute instances run your notebooks.
+The workspace setup is a folder in an Amazon EFS drive that can elastically scale in size as your local data grows.
+It provides visual interface for:
+*Visual Git workflow
+*Experiment tracking
+*SageMaker Autopilot for AutoML on tabular datasets
+*Curated one-click solutions for applications on SageMaker Jumpstart
+*Pretrained and fine-tunable models for typical vision and NLP jobs through SageMaker Jumpstart
+*Model-building pipelines using SageMaker pipelines
+*SageMaker Clarify for detecting pretraining bias
+*SageMaker Feature store for creating, sharing, and managing curated data for ML development
+*SageMaker Data Wrangler for preparing data
+
+SageMaker Data Wrangler
+It lets you import (Amazon S3, Athena, and Redshift), transform and analyze data through a visual workflow, and then export that workflow.
+A data preparation pipeline on SageMaker Data Wrangler is called a data flow.
+It automatically creates a new intermediate data frame when adding a new step to the data flow.
+*Data Transform Step:  Over 300 built-in transforms to normalize, transform, and combine columns without writing any code. Custom steps using Python or PySpark code are possible.
+*Data Analysis Step: A quick machine learning model to assess feature importance scores, statistical summaries of your columns, and a correlation or target leakage report.
+*Join: It joins two datasets and produces one data frame, including left joins, right joins, and inner joins.
+*Concatenate: It concatenates one dataset to another and adds the result to your data flow.
+Steps can be exported to a Data Wrangler job, a notebook with all the steps, a feature store, or stand-alone Python code.
+This lets you modularize your preprocessing step and run it on demand, usually with SageMaker Processing
+
+SageMaker Processing
+It allows to run common data processing workloads such as preprocessing, feature engineering, and model evaluation.
+It takes your Python or PySpark script, copies data from an Amazon S3 location, processes data, and writes back output data to another Amazon S3 output location.
+Custom container images rather than built-in images are possible.
+When passing in a Python script use => SKLearnProcessor.
+When passing in a PySpark script use => PySparkProcessor.
+Both are classes in the SageMaker Python SDK. 
+Multiple instances to process data are possible.
+You can shard the input objects by S3 key so that each instance receives the same number of input files to process.
+
+SageMaker GroundTruth
+To train an ML model using a supervised training algorithm, you need high-quality, labeled data.
+GroundTruth provides built-in labeling functionality for common task types (like image classification or document classification).
+It allows completely customized workflows.
+You can optionally use automated data labeling for some task types.
+https://docs.aws.amazon.com/sagemaker/latest/dg/data-label.html
+
+Training
+Once prepared data, you can train your models using one of the following training modes on Amazon SageMaker:
+*17 built-in algorithms for typical use cases: binary or multiclass classification, regression, time series forecasting, anomaly detection, IP address anomalies, embedding generation, clustering, topic modeling, text classification and summarization, image classification, object detection, and semantic segmentation. https://docs.aws.amazon.com/sagemaker/latest/dg/algos.html
+*Using a popular ML framework like TensorFlow, PyTorch, or MXNet, you can submit a script to SageMaker, by providing a managed container that can run several versions of these popular frameworks. 
+*Create a completely custom container for your training job. SageMaker runs your container in a managed training instance of your choice with the entry point that you provide. 
+SageMaker's additional training features:
+*Distributed Training: SageMaker provides both model parallel and data parallel distributed training strategies. Data parallel strategy in distributed training is where the dataset is split up across multiple processing nodes. Each node runs an epoch of training and shares results with other nodes before moving on to the next epoch. In model parallel training, the model is split up across multiple processing nodes. Each node carries a subset of the models and is responsible to run a subset of the transformations as decided by a pipeline execution schedule so that performance losses due to sequential computations are minimized.
+*Managed Spot Training: It reduces the cost of training by up to 90 percent. Spot instance interruptions are handled by SageMaker, but you are responsible for creating your own checkpoints to allow the training to continue post any disruptions.
+*Automatic Model Tuning (hyperparameter optimization): It searches for the optimal set of hyperparameters using either a random search or Bayesian optimization. 
+*Monitoring Training Jobs: training job logs can be viewed in Amazon CloudWatch. You can also view final metrics using the DescribeTrainingJob API call.
+*SageMaker Debugger: profiles and debugs your training jobs to improve the performance of ML model training by eliminating bottlenecks and detecting nonconverging conditions. Stores instance-level metrics, framework-level metrics, and custom tensors that you define from within your training code.  Debugger also provides profiler rules such as CPU bottleneck threshold and I/O bottleneck threshold. When a rule is activated, you can trigger an Amazon SNS notification or Lambda function to take further action, such as stopping a training job.
+
+Model Inference
+
+
 
 
 
